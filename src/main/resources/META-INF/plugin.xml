@@ -1,20 +1,21 @@
 <!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
 
-<idea-plugin url="https://github.com/mustah/TabSwitch">
-  <name>TabSwitch</name>
-  <version>3.0.9</version>
+<idea-plugin url="https://github.com/luzuojin/TabSwitch">
+  <name>TabSwitchPlus</name>
+  <version>3.1.0</version>
   <idea-version since-build="141.1532"/>
 
   <description><![CDATA[
+    <h3>
+      Forked from the original <a href="https://plugins.jetbrains.com/plugin/179-tabswitch">Tabswitch</a>
+    </h3>
     Open files/tabs switcher to quickly switch between tabs with less keystrokes than
     Recent Files. Open files are selected from a list in most recently used order, similarly
     to Alt+Tab in Windows or Ctrl-Tab in Opera. By default the action is mapped to
-    Alt+A, but another popular assignment is CMD+E.<br><br>
-
-    Thanks to Timur Zambalayev for the original plugin, Martin Fuhrer for a major contribution
-    in the form of a rewrite and Mark Scott for patching a bug. Follow further development of
-    <a href="https://github.com/mustah/TabSwitch">this plugin on GitHub</a> or follow
-    <a href="https://twitter.com/_musten_">me on twitter</a> for announcements and other things.<br/><br/>
+    Alt+L, but another popular assignment is CMD+E.
+    <br/><br/>
+    Thanks to Timur Zambalayev for the original plugin, Martin Fuhrer for a major contribution in the form of a rewrite and Mark Scott for patching a bug.
+    <br/><br/>
     ]]>
   </description>
   <change-notes><![CDATA[
@@ -33,7 +34,7 @@
     2.1.6: RubyMine compatible version.<br><br/>
   ]]></change-notes>
 
-  <vendor url="https://twitter.com/_musten_" email="must.tahir@gmail.com">Must</vendor>
+  <vendor url="https://www.github.com/luzuojin" email="luzuojin@gmail.com">luzj</vendor>
 
   <project-components>
     <component>
@@ -46,11 +47,13 @@
       id="org.intellij.ideaplugins.tabswitch.action.NextTabAction"
       class="org.intellij.ideaplugins.tabswitch.action.NextTabAction"
       text="Next tab">
+      <keyboard-shortcut first-keystroke="alt L" keymap="$default"/>
     </action>
     <action
       id="org.intellij.ideaplugins.tabswitch.action.PrevTabAction"
       class="org.intellij.ideaplugins.tabswitch.action.PrevTabAction"
       text="Previous tab">
+      <keyboard-shortcut first-keystroke="alt P" keymap="$default"/>
     </action>
     <action
       id="TabSwitchPlugin.NextVcsChangeAction"

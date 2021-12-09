@@ -1,0 +1,28 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.3.0'
+}
+
+group 'org.intellij.ideaplugins'
+version '3.1.0'
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2021.3'
+}
+
+patchPluginXml {
+    changeNotes = """
+    Change default select tab on popup view show<br/>
+    Change prev/next keyboard-shortcut can work with each other<br/>
+    Change to gradle project<br/>
+    Fixed some issues<br/>
+      """
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        mavenLocal()
+        mavenCentral()
+    }
+}
